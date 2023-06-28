@@ -138,7 +138,7 @@ Some scenarios require that an argument supplied for a type parameter implement 
 This pattern enables the C# compiler to determine the containing type for the overloaded operators, or any `static virtual` or `static abstract` method. It provides the syntax so that the addition and subtraction operators can be defined on a containing type. Without this constraint, the parameters and arguments would be required to be declared as the interface, rather than the type parameter:
 
 ```csharp
-public interface IAdditionSubtraction<T> where T : IAdditionSubtraction<T>
+public interface IAdditionSubtraction<T>
 {
     public abstract static IAdditionSubtraction<T> operator +(
         IAdditionSubtraction<T> left,
